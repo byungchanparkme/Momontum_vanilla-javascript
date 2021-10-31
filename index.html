@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <div id="login-container">
+        <form id="login-form">
+            <h1>What is your name?</h1>
+            <input 
+              required 
+              placeholder="Type something..."
+              maxlength="15" 
+              type="text"  
+            />
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+    <div id="main-container" class="hidden">
+        <h2 id="clock"></h2>
+        <h1 id="greeting"></h1>
+        
+        <form id="today-focus">
+            <p>What is your main focus for today?</p>
+            <label class="hidden" for="main-focus">Main Focus</label>
+            <input type="text" id="main-focus" autocomplete="off" placeholder="" />
+            <button type="submit" class="hidden">Enter</button>
+        </form>
+        <div id="today-focus-result">
+            <h2>TODAY</h2>
+            <ul id="focus-list"></ul>
+        </div>
+        
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="weather">
+            <p></p>
+            <span></span>
+        </div>
+        <button class="open-todo">Todo</button>
+        <div class="todo-popup">
+            <header>Today</header>
+            <main class="default-screen">
+                <p>Add a todo to get started</p>
+                <button class="open-todo-input">New Todo</button>
+            </main>
+            <ul id="todo-popup-list"></ul>
+            <footer class="todo-screen hidden">
+                <form id="todo-popup-form">
+                    <input type="text" placeholder="New Todo" />
+                    <button type="submit" class="hidden">Enter</button>
+                </form>
+            </footer>
+        </div>
+    </div>
+    
+    <script src="./js/greeting.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/quotes.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/todayFocus.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/weather.js"></script>
+</body>
+</html>
